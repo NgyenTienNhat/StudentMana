@@ -310,7 +310,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1424, 701);
+            this.ClientSize = new System.Drawing.Size(1258, 701);
             this.Controls.Add(this.panel_slide);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmMain";
@@ -327,7 +327,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel_slide;
-        private System.Windows.Forms.Panel panel_logo;
         private System.Windows.Forms.Panel panel_stdsubmenu;
         private System.Windows.Forms.Button button_status;
         private System.Windows.Forms.Button button_managestd;
@@ -342,5 +341,6 @@
         private System.Windows.Forms.Button button_newcourse;
         private System.Windows.Forms.Button button_course;
         private System.Windows.Forms.Button button_logout;
+        private System.Windows.Forms.Panel panel_logo;
     }
 }

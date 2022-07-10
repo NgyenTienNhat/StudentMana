@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {}
+    "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentMana\\StudentManagement\\StudentManagement.csproj": {}
   },
   "projects": {
-    "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
+    "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentMana\\StudentManagement\\StudentManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+        "projectUniqueName": "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentMana\\StudentManagement\\StudentManagement.csproj",
         "projectName": "StudentManagement",
-        "projectPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+        "projectPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentMana\\StudentManagement\\StudentManagement.csproj",
         "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentManagement\\StudentManagement\\obj\\",
+        "outputPath": "C:\\Users\\nguye\\OneDrive\\Máy tính\\C#\\StudentMana\\StudentManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,22 @@
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -61,7 +77,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
