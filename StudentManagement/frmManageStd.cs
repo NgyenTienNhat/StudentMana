@@ -96,5 +96,12 @@ namespace StudentManagement
             StudentManager.UpdateStudent(s);
             LoadDataForDGV();
         }
+
+        private void button_delete_std_Click(object sender, EventArgs e)
+        {
+            Student s = GetStudentInfo();
+            StudentManager.DeleteStudent(s);
+            LoadDataForDGV();
+        }
     }
 }

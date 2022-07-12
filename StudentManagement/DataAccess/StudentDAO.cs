@@ -89,5 +89,14 @@ namespace StudentManagement.DataAccess
             return DAO.ExecuteSql(sql, param);
             
         }
+
+        public static int DeleteStudent(int StudentId)
+        {
+            string sql = "Delete from Student where StudentId = @studentid";
+            SqlParameter[] parameters = new SqlParameter[1];
+            parameters[0] = new SqlParameter("@studentid", SqlDbType.Int);
+            parameters[0].Value = StudentId;
+            return DAO.ExecuteSql(sql, parameters);
+        }
     }
 }
