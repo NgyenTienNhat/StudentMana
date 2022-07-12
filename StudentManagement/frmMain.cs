@@ -28,6 +28,7 @@ namespace StudentManagement
             panel_stdsubmenu.Visible= false;
             panel_coursesubmenu.Visible= false;
             panel_scoresubmenu.Visible= false;
+            panel_classsubmenu.Visible= false;
         }
 
         private void hideSubmenu()
@@ -38,6 +39,8 @@ namespace StudentManagement
                 panel_coursesubmenu.Visible = false;
             if (panel_scoresubmenu.Visible == true)
                 panel_scoresubmenu.Visible = false;
+            if (panel_classsubmenu.Visible == true)
+                panel_classsubmenu.Visible = false;
         }
 
         private void showSubmenu(Panel submenu)
@@ -58,12 +61,29 @@ namespace StudentManagement
 
         private void button_registration_Click(object sender, EventArgs e)
         {
-            //hideSubmenu();
+            openchildForm(new frmAddStd());
+            hideSubmenu();
+        }
+
+        private Form activeForm = null;
+        private void openchildForm(Form childForm)
+        {
+            if(activeForm != null)
+               activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panel_main.Controls.Add(childForm);
+            panel_main.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
 
         private void button_managestd_Click(object sender, EventArgs e)
         {
-           // hideSubmenu();
+            openchildForm(new frmManageStd());
+            hideSubmenu();
 
         }
 
@@ -113,6 +133,15 @@ namespace StudentManagement
 
         }
 
-      
+        private void button_class_Click(object sender, EventArgs e)
+        {
+            showSubmenu(panel_classsubmenu);
+        }
+
+        private void button_manageclass_Click(object sender, EventArgs e)
+        {
+            openchildForm(new frmClassManage());
+            hideSubmenu();
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 using System.Data;
 using System;
@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace StudentManagement.DataAccess
-{   class DAO { 
+{   
+    class DAO { 
         public static SqlConnection GetConnection()
         {
             var config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();

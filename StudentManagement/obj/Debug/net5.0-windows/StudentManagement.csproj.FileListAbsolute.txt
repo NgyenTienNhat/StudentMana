@@ -85,3 +85,11 @@ C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\ne
 C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\obj\Debug\net5.0-windows\StudentManagement.csproj.CopyComplete
 C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\obj\Debug\net5.0-windows\StudentManagement.frmAddStd.resources
 C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\net5.0-windows\appsettings.json
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\net5.0-windows\System.Data.SqlClient.dll
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\net5.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\net5.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\net5.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\net5.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\bin\Debug\net5.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\obj\Debug\net5.0-windows\StudentManagement.frmManageStd.resources
+C:\Users\nguye\OneDrive\Máy tính\C#\StudentMana\StudentManagement\obj\Debug\net5.0-windows\StudentManagement.frmClassManage.resources

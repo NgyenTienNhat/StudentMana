@@ -17,7 +17,7 @@ namespace StudentManagement
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAddStd());
+            Application.Run(new frmMain());
         }
     }
 }
