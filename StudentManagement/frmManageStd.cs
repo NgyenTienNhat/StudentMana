@@ -103,5 +103,6 @@ namespace StudentManagement
             StudentManager.DeleteStudent(s);
             LoadDataForDGV();
         }
+
     }
 }

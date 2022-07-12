@@ -4,10 +4,10 @@
     <Compile Update="frmAddStd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmClassManage.cs">
+    <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmMain.cs">
+    <Compile Update="frmManageClass.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmManageStd.cs">

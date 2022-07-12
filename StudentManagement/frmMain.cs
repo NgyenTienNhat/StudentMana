@@ -140,7 +140,7 @@ namespace StudentManagement
 
         private void button_manageclass_Click(object sender, EventArgs e)
         {
-            openchildForm(new frmClassManage());
+            openchildForm(new frmManageClass());
             hideSubmenu();
         }
     }

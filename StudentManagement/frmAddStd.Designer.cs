@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -55,7 +56,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_stdname = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,6 +81,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(932, 36);
             this.panel1.TabIndex = 18;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(369, 8);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(197, 28);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "ADD NEW STUDENT";
             // 
             // label7
             // 
@@ -211,6 +224,7 @@
             // 
             this.textBox_address.Location = new System.Drawing.Point(154, 253);
             this.textBox_address.Name = "textBox_address";
+            this.textBox_address.PlaceholderText = "Enter Address";
             this.textBox_address.Size = new System.Drawing.Size(383, 27);
             this.textBox_address.TabIndex = 35;
             // 
@@ -218,6 +232,7 @@
             // 
             this.textBox_rollno.Location = new System.Drawing.Point(154, 211);
             this.textBox_rollno.Name = "textBox_rollno";
+            this.textBox_rollno.PlaceholderText = "Enter RollNo";
             this.textBox_rollno.Size = new System.Drawing.Size(153, 27);
             this.textBox_rollno.TabIndex = 34;
             // 
@@ -294,6 +309,7 @@
             // 
             this.textBox_mobile.Location = new System.Drawing.Point(154, 92);
             this.textBox_mobile.Name = "textBox_mobile";
+            this.textBox_mobile.PlaceholderText = "Enter Mobile";
             this.textBox_mobile.Size = new System.Drawing.Size(153, 27);
             this.textBox_mobile.TabIndex = 26;
             // 
@@ -321,21 +337,9 @@
             // 
             this.textBox_stdname.Location = new System.Drawing.Point(154, 52);
             this.textBox_stdname.Name = "textBox_stdname";
+            this.textBox_stdname.PlaceholderText = "Enter Name";
             this.textBox_stdname.Size = new System.Drawing.Size(153, 27);
             this.textBox_stdname.TabIndex = 23;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(369, 8);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(197, 28);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "ADD NEW STUDENT";
             // 
             // frmAddStd
             // 

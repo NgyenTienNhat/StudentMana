@@ -52,6 +52,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel_addstd = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox_search = new System.Windows.Forms.TextBox();
             this.comboBox_class = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel_register = new System.Windows.Forms.Panel();
@@ -83,7 +85,7 @@
             // button_delete_std
             // 
             this.button_delete_std.BackColor = System.Drawing.SystemColors.Control;
-            this.button_delete_std.Location = new System.Drawing.Point(502, 228);
+            this.button_delete_std.Location = new System.Drawing.Point(504, 256);
             this.button_delete_std.Name = "button_delete_std";
             this.button_delete_std.Size = new System.Drawing.Size(160, 39);
             this.button_delete_std.TabIndex = 17;
@@ -94,7 +96,7 @@
             // button_update_std
             // 
             this.button_update_std.BackColor = System.Drawing.SystemColors.Control;
-            this.button_update_std.Location = new System.Drawing.Point(287, 228);
+            this.button_update_std.Location = new System.Drawing.Point(287, 256);
             this.button_update_std.Name = "button_update_std";
             this.button_update_std.Size = new System.Drawing.Size(160, 39);
             this.button_update_std.TabIndex = 16;
@@ -125,6 +127,7 @@
             // 
             this.textBox_address.Location = new System.Drawing.Point(470, 111);
             this.textBox_address.Name = "textBox_address";
+            this.textBox_address.PlaceholderText = "Enter Address";
             this.textBox_address.Size = new System.Drawing.Size(297, 27);
             this.textBox_address.TabIndex = 13;
             // 
@@ -132,6 +135,7 @@
             // 
             this.textBox_rollno.Location = new System.Drawing.Point(470, 63);
             this.textBox_rollno.Name = "textBox_rollno";
+            this.textBox_rollno.PlaceholderText = "Enter RollNo";
             this.textBox_rollno.Size = new System.Drawing.Size(129, 27);
             this.textBox_rollno.TabIndex = 12;
             // 
@@ -210,6 +214,7 @@
             // 
             this.textBox_mobile.Location = new System.Drawing.Point(150, 109);
             this.textBox_mobile.Name = "textBox_mobile";
+            this.textBox_mobile.PlaceholderText = "Enter Mobile";
             this.textBox_mobile.Size = new System.Drawing.Size(152, 27);
             this.textBox_mobile.TabIndex = 4;
             // 
@@ -237,6 +242,7 @@
             // 
             this.textBox_stdname.Location = new System.Drawing.Point(150, 64);
             this.textBox_stdname.Name = "textBox_stdname";
+            this.textBox_stdname.PlaceholderText = "Enter Name";
             this.textBox_stdname.Size = new System.Drawing.Size(152, 27);
             this.textBox_stdname.TabIndex = 1;
             // 
@@ -277,6 +283,8 @@
             // 
             this.panel_addstd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel_addstd.Controls.Add(this.button1);
+            this.panel_addstd.Controls.Add(this.textBox_search);
             this.panel_addstd.Controls.Add(this.comboBox_class);
             this.panel_addstd.Controls.Add(this.label9);
             this.panel_addstd.Controls.Add(this.label8);
@@ -300,8 +308,26 @@
             this.panel_addstd.Controls.Add(this.textBox_stdname);
             this.panel_addstd.Location = new System.Drawing.Point(8, 379);
             this.panel_addstd.Name = "panel_addstd";
-            this.panel_addstd.Size = new System.Drawing.Size(930, 269);
+            this.panel_addstd.Size = new System.Drawing.Size(930, 298);
             this.panel_addstd.TabIndex = 19;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(215, 193);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 27);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Search";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // textBox_search
+            // 
+            this.textBox_search.Location = new System.Drawing.Point(7, 193);
+            this.textBox_search.Name = "textBox_search";
+            this.textBox_search.PlaceholderText = "Search here.";
+            this.textBox_search.Size = new System.Drawing.Size(295, 27);
+            this.textBox_search.TabIndex = 44;
             // 
             // comboBox_class
             // 
@@ -386,5 +412,7 @@
         private System.Windows.Forms.Panel panel_register;
         private System.Windows.Forms.ComboBox comboBox_class;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox_search;
+        private System.Windows.Forms.Button button1;
     }
 }
