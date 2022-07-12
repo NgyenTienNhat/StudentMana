@@ -31,7 +31,7 @@ namespace StudentManagement
         }
         public void LoadDataForDGV()
         {
-            var data = (from s in StudentManager.GetStudents()
+            var datadataGridViewAddStudent = (from s in StudentManager.GetStudents()
                        join c in ClassDAO.GetAllClass() on s.ClassId equals c.ClassId
                        select new
                        {
@@ -39,11 +39,12 @@ namespace StudentManagement
                            StudentName = s.StudentName,
                            Mobile = s.Mobile,
                            Dob = s.Dob,
+                           Male = s.Male,
                            RollNo = s.RollNo,
                            Address = s.Address,
                            ClassName = c.ClassName
                        }).ToList();
-            dataGridView1.DataSource = data;
+            dataGridView1.DataSource = datadataGridViewAddStudent;
 
         }
         private Student GetStudentInfo()
@@ -68,10 +69,15 @@ namespace StudentManagement
                 }
             return s;
         }
+        private void button_add_std_Click_1(object sender, EventArgs e)
+        {
+            Student s = GetStudentInfo();
+               StudentManager.InsertStudent(s);
+               LoadDataForDGV();
+            
+        }
 
-      
-
-        private void button_cancel_Click(object sender, EventArgs e)
+        private void button_cancel_Click_1(object sender, EventArgs e)
         {
             textBox_Id.Clear();
             textBox_stdname.Clear();
@@ -91,12 +97,6 @@ namespace StudentManagement
             }
         }
 
-        private void button_add_std_Click_1(object sender, EventArgs e)
-        {
-            Student s = GetStudentInfo();
-               StudentManager.InsertStudent(s);
-               LoadDataForDGV();
-            
-        }
+     
     }
 }

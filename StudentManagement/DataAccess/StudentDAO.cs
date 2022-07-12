@@ -61,5 +61,33 @@ namespace StudentManagement.DataAccess
             param[7].Value = s.Image;
             return DAO.ExecuteSql(sql, param);
         }
+
+        public static int UpdateStudent(Student s)
+        {
+            string sql = "Update Student set StudentName = @studentname, Dob = @dob, Male = @male, " +
+                "Mobile = @mobile, RollNo = @rollno, [Address] = @address, ClassId = @classid, " +
+                "Image = @image where StudentId = @studentid";
+            SqlParameter[] param = new SqlParameter[9];
+            param[0] = new SqlParameter("@studentname", SqlDbType.NVarChar);
+            param[0].Value = s.StudentName;
+            param[1] = new SqlParameter("@dob", SqlDbType.Date);
+            param[1].Value = s.Dob;
+            param[2] = new SqlParameter("@male", SqlDbType.Bit);
+            param[2].Value = s.Male;
+            param[3] = new SqlParameter("@mobile", SqlDbType.VarChar);
+            param[3].Value = s.Mobile;
+            param[4] = new SqlParameter("@rollno", SqlDbType.VarChar);
+            param[4].Value = s.RollNo;
+            param[5] = new SqlParameter("@address", SqlDbType.NVarChar);
+            param[5].Value = s.Address;
+            param[6] = new SqlParameter("@classid", SqlDbType.Int);
+            param[6].Value = s.ClassId;
+            param[7] = new SqlParameter("@image", SqlDbType.NVarChar);
+            param[7].Value = s.Image;
+            param[8] = new SqlParameter("@studentid", SqlDbType.Int);
+            param[8].Value = s.StudentId;
+            return DAO.ExecuteSql(sql, param);
+            
+        }
     }
 }

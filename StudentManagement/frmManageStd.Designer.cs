@@ -30,8 +30,8 @@
         {
             this.label8 = new System.Windows.Forms.Label();
             this.textBox_Id = new System.Windows.Forms.TextBox();
-            this.button_cancel = new System.Windows.Forms.Button();
-            this.button_add_std = new System.Windows.Forms.Button();
+            this.button_delete_std = new System.Windows.Forms.Button();
+            this.button_update_std = new System.Windows.Forms.Button();
             this.button_upload_image = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.textBox_address = new System.Windows.Forms.TextBox();
@@ -52,6 +52,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel_addstd = new System.Windows.Forms.Panel();
+            this.comboBox_class = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel_register = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -78,25 +80,26 @@
             this.textBox_Id.Size = new System.Drawing.Size(152, 27);
             this.textBox_Id.TabIndex = 18;
             // 
-            // button_cancel
+            // button_delete_std
             // 
-            this.button_cancel.BackColor = System.Drawing.SystemColors.Control;
-            this.button_cancel.Location = new System.Drawing.Point(502, 228);
-            this.button_cancel.Name = "button_cancel";
-            this.button_cancel.Size = new System.Drawing.Size(160, 39);
-            this.button_cancel.TabIndex = 17;
-            this.button_cancel.Text = "Delete";
-            this.button_cancel.UseVisualStyleBackColor = false;
+            this.button_delete_std.BackColor = System.Drawing.SystemColors.Control;
+            this.button_delete_std.Location = new System.Drawing.Point(502, 228);
+            this.button_delete_std.Name = "button_delete_std";
+            this.button_delete_std.Size = new System.Drawing.Size(160, 39);
+            this.button_delete_std.TabIndex = 17;
+            this.button_delete_std.Text = "Delete";
+            this.button_delete_std.UseVisualStyleBackColor = false;
             // 
-            // button_add_std
+            // button_update_std
             // 
-            this.button_add_std.BackColor = System.Drawing.SystemColors.Control;
-            this.button_add_std.Location = new System.Drawing.Point(287, 228);
-            this.button_add_std.Name = "button_add_std";
-            this.button_add_std.Size = new System.Drawing.Size(160, 39);
-            this.button_add_std.TabIndex = 16;
-            this.button_add_std.Text = "Update";
-            this.button_add_std.UseVisualStyleBackColor = false;
+            this.button_update_std.BackColor = System.Drawing.SystemColors.Control;
+            this.button_update_std.Location = new System.Drawing.Point(287, 228);
+            this.button_update_std.Name = "button_update_std";
+            this.button_update_std.Size = new System.Drawing.Size(160, 39);
+            this.button_update_std.TabIndex = 16;
+            this.button_update_std.Text = "Update";
+            this.button_update_std.UseVisualStyleBackColor = false;
+            this.button_update_std.Click += new System.EventHandler(this.button_update_std_Click);
             // 
             // button_upload_image
             // 
@@ -185,6 +188,8 @@
             // 
             // dateTimePicker_dob
             // 
+            this.dateTimePicker_dob.Checked = false;
+            this.dateTimePicker_dob.CustomFormat = "";
             this.dateTimePicker_dob.Location = new System.Drawing.Point(470, 16);
             this.dateTimePicker_dob.Name = "dateTimePicker_dob";
             this.dateTimePicker_dob.Size = new System.Drawing.Size(227, 27);
@@ -213,15 +218,15 @@
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(7, 112);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 24);
+            this.label2.Size = new System.Drawing.Size(79, 24);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Male :";
+            this.label2.Text = "Mobile :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(4, 67);
+            this.label1.Location = new System.Drawing.Point(7, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 24);
             this.label1.TabIndex = 2;
@@ -265,15 +270,18 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(930, 323);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panel_addstd
             // 
             this.panel_addstd.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel_addstd.Controls.Add(this.comboBox_class);
+            this.panel_addstd.Controls.Add(this.label9);
             this.panel_addstd.Controls.Add(this.label8);
             this.panel_addstd.Controls.Add(this.textBox_Id);
-            this.panel_addstd.Controls.Add(this.button_cancel);
-            this.panel_addstd.Controls.Add(this.button_add_std);
+            this.panel_addstd.Controls.Add(this.button_delete_std);
+            this.panel_addstd.Controls.Add(this.button_update_std);
             this.panel_addstd.Controls.Add(this.button_upload_image);
             this.panel_addstd.Controls.Add(this.pictureBox1);
             this.panel_addstd.Controls.Add(this.textBox_address);
@@ -293,6 +301,24 @@
             this.panel_addstd.Name = "panel_addstd";
             this.panel_addstd.Size = new System.Drawing.Size(930, 269);
             this.panel_addstd.TabIndex = 19;
+            // 
+            // comboBox_class
+            // 
+            this.comboBox_class.FormattingEnabled = true;
+            this.comboBox_class.Location = new System.Drawing.Point(470, 152);
+            this.comboBox_class.Name = "comboBox_class";
+            this.comboBox_class.Size = new System.Drawing.Size(123, 28);
+            this.comboBox_class.TabIndex = 43;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(327, 152);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 24);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Class Name :";
             // 
             // panel_register
             // 
@@ -318,6 +344,7 @@
             this.MinimumSize = new System.Drawing.Size(972, 699);
             this.Name = "frmManageStd";
             this.Text = "frmManageStd";
+            this.Load += new System.EventHandler(this.frmManageStd_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -333,8 +360,8 @@
 
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox_Id;
-        private System.Windows.Forms.Button button_cancel;
-        private System.Windows.Forms.Button button_add_std;
+        private System.Windows.Forms.Button button_delete_std;
+        private System.Windows.Forms.Button button_update_std;
         private System.Windows.Forms.Button button_upload_image;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox textBox_address;
@@ -356,5 +383,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel_addstd;
         private System.Windows.Forms.Panel panel_register;
+        private System.Windows.Forms.ComboBox comboBox_class;
+        private System.Windows.Forms.Label label9;
     }
 }

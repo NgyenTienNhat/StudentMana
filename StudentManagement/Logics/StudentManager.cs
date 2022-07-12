@@ -20,19 +20,19 @@ namespace StudentManagement.Logics
             return StudentDAO.InsertStudent(s);
         }
 
-       /* public static int EditStudent(Student s)
+        public static int UpdateStudent(Student s)
         {
             return StudentDAO.UpdateStudent(s);
         }
 
-        public static int DeleteStudent(Student s)
+        /*public static int DeleteStudent(Student s)
         {
             return StudentDAO.DeleteStudent(s.Id);
-        }*/
+        }
 
-        /*public static List<string> GetAllMajors()
+        public static List<string> GetAllMajors()
         {
-            return new List<string> { "SE", "IA", "GD", "SB" , "AI", "HS"};
+            return new List<string> { "SE", "IA", "GD", "SB", "AI", "HS" };
         }*/
     }
 }

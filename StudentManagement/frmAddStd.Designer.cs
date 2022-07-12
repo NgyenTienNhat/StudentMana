@@ -55,6 +55,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_stdname = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -65,19 +66,20 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 54);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 53);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(930, 254);
+            this.dataGridView1.Size = new System.Drawing.Size(930, 253);
             this.dataGridView1.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(11, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1134, 36);
+            this.panel1.Size = new System.Drawing.Size(932, 36);
             this.panel1.TabIndex = 18;
             // 
             // label7
@@ -87,7 +89,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(354, 8);
+            this.label7.Location = new System.Drawing.Point(354, -125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(197, 28);
             this.label7.TabIndex = 0;
@@ -123,7 +125,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.textBox_stdname);
-            this.panel3.Location = new System.Drawing.Point(12, 314);
+            this.panel3.Location = new System.Drawing.Point(11, 315);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(930, 335);
             this.panel3.TabIndex = 24;
@@ -132,7 +134,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(8, 14);
+            this.label9.Location = new System.Drawing.Point(8, 13);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 24);
             this.label9.TabIndex = 43;
@@ -143,7 +145,7 @@
             this.textBox_Id.Enabled = false;
             this.textBox_Id.Location = new System.Drawing.Point(154, 11);
             this.textBox_Id.Name = "textBox_Id";
-            this.textBox_Id.Size = new System.Drawing.Size(152, 27);
+            this.textBox_Id.Size = new System.Drawing.Size(153, 27);
             this.textBox_Id.TabIndex = 42;
             // 
             // comboBox_class
@@ -160,9 +162,9 @@
             this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(8, 303);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 24);
+            this.label8.Size = new System.Drawing.Size(116, 24);
             this.label8.TabIndex = 40;
-            this.label8.Text = "Class ID :";
+            this.label8.Text = "Class Name :";
             // 
             // button_cancel
             // 
@@ -171,8 +173,9 @@
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(160, 39);
             this.button_cancel.TabIndex = 39;
-            this.button_cancel.Text = "Cancel";
+            this.button_cancel.Text = "Clear";
             this.button_cancel.UseVisualStyleBackColor = false;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click_1);
             // 
             // button_add_std
             // 
@@ -194,10 +197,11 @@
             this.button_upload_image.TabIndex = 37;
             this.button_upload_image.Text = "Upload";
             this.button_upload_image.UseVisualStyleBackColor = false;
+            this.button_upload_image.Click += new System.EventHandler(this.button_upload_image_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(767, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(767, 13);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(160, 163);
             this.pictureBox1.TabIndex = 36;
@@ -214,7 +218,7 @@
             // 
             this.textBox_rollno.Location = new System.Drawing.Point(154, 211);
             this.textBox_rollno.Name = "textBox_rollno";
-            this.textBox_rollno.Size = new System.Drawing.Size(152, 27);
+            this.textBox_rollno.Size = new System.Drawing.Size(153, 27);
             this.textBox_rollno.TabIndex = 34;
             // 
             // radioButton_female
@@ -253,7 +257,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(8, 214);
+            this.label5.Location = new System.Drawing.Point(8, 213);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(120, 24);
             this.label5.TabIndex = 30;
@@ -290,7 +294,7 @@
             // 
             this.textBox_mobile.Location = new System.Drawing.Point(154, 92);
             this.textBox_mobile.Name = "textBox_mobile";
-            this.textBox_mobile.Size = new System.Drawing.Size(152, 27);
+            this.textBox_mobile.Size = new System.Drawing.Size(153, 27);
             this.textBox_mobile.TabIndex = 26;
             // 
             // label2
@@ -317,19 +321,32 @@
             // 
             this.textBox_stdname.Location = new System.Drawing.Point(154, 52);
             this.textBox_stdname.Name = "textBox_stdname";
-            this.textBox_stdname.Size = new System.Drawing.Size(152, 27);
+            this.textBox_stdname.Size = new System.Drawing.Size(153, 27);
             this.textBox_stdname.TabIndex = 23;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(369, 8);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(197, 28);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "ADD NEW STUDENT";
             // 
             // frmAddStd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(954, 652);
+            this.ClientSize = new System.Drawing.Size(955, 660);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
-            this.MinimumSize = new System.Drawing.Size(972, 699);
+            this.MinimumSize = new System.Drawing.Size(971, 696);
             this.Name = "frmAddStd";
             this.Text = "Register";
             this.Load += new System.EventHandler(this.frmAddStd_Load);
@@ -372,5 +389,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox_stdname;
+        private System.Windows.Forms.Label label10;
     }
 }
