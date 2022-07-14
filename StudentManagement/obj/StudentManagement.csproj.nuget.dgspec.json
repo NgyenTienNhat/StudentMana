@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
+            "Microsoft.SqlServer.SqlManagementObjects": {
+              "target": "Package",
+              "version": "[161.47021.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.3, )"
