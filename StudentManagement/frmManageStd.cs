@@ -30,18 +30,18 @@ namespace StudentManagement
         public void LoadDataForDGV()
         {
             var datadataGridViewManageStd = (from s in StudentManager.GetStudents()
-                                             join c in ClassDAO.GetAllClass() on s.ClassId equals c.ClassId
-                                             select new
-                                             {
-                                                 StudentId = s.StudentId,
-                                                 StudentName = s.StudentName,
-                                                 Mobile = s.Mobile,
-                                                 Dob = s.Dob,
-                                                 Male = s.Male,
-                                                 RollNo = s.RollNo,
-                                                 Address = s.Address,
-                                                 ClassName = c.ClassName
-                                             }).ToList();
+                join c in ClassDAO.GetAllClass() on s.ClassId equals c.ClassId
+                select new
+                          {
+                           StudentId = s.StudentId,
+                           StudentName = s.StudentName,
+                           Mobile = s.Mobile,
+                           Dob = s.Dob,
+                           Male = s.Male,
+                           RollNo = s.RollNo,
+                           Address = s.Address,
+                           ClassName = c.ClassName
+                           }).ToList();
             dataGridView1.DataSource = datadataGridViewManageStd;
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -90,6 +90,7 @@ namespace StudentManagement
             return s;
         }
 
+
         private void button_update_std_Click(object sender, EventArgs e)
         {
             Student s = GetStudentInfo();
@@ -104,5 +105,45 @@ namespace StudentManagement
             LoadDataForDGV();
         }
 
+        /*private void textBox_search_TextChanged(object sender, EventArgs e)
+        {
+            string valuesearch = textBox_search.Text;
+            int rowIndex = -1;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            try
+            {
+                foreach(DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (row.Cells[0].Value.ToString().Contains(valuesearch))
+                    {
+                        rowIndex = row.Index;
+                        dataGridView1.ClearSelection();
+                        row.Selected = true;
+                        dataGridView1.FirstDisplayedScrollingRowIndex = rowIndex;
+                        dataGridView1.Focus();
+                        break;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Don't have student");
+            }
+            LoadDataForDGV();
+        }*/
+
+        /*private Student GetSearch()
+        {
+            Student s = new Student();
+            s.StudentName = textBox_search.Text.Trim();
+            return s;
+        }*/
+
+        private void button_searchbyname_Click(object sender, EventArgs e)
+        {
+           /* Student s = GetSearch();
+            StudentManager.SearchStudentByName(s);
+            LoadDataForDGV();*/
+        }
     }
 }

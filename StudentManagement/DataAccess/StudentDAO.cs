@@ -98,5 +98,33 @@ namespace StudentManagement.DataAccess
             parameters[0].Value = StudentId;
             return DAO.ExecuteSql(sql, parameters);
         }
+
+        /*public static List<Student> SearchStudentByName(string StudentName)
+        {
+            string sql = "Select * from Student where StudentName = @studentname";
+            DataTable dt = DAO.GetDataBySQL(sql);
+            List<Student> list = new List<Student>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                int? ClassId = 0;
+                if (dr["ClassId"] != null)
+                {
+                    ClassId = Convert.ToInt32(dr["ClassId"]);
+                }
+                Student s = new Student(
+                    Convert.ToInt32(dr["StudentId"]),
+                    dr["StudentName"].ToString(),
+                    Convert.ToDateTime(dr["Dob"]),
+                    Convert.ToBoolean(dr["Male"]),
+                    dr["Mobile"].ToString(),
+                    dr["RollNo"].ToString(),
+                    dr["Address"].ToString(),
+                    ClassId,
+                    dr["Image"].ToString()
+                    );
+                list.Add(s);
+            }
+            return list;
+        }*/
     }
 }
