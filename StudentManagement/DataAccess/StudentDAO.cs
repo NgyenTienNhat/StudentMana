@@ -99,7 +99,7 @@ namespace StudentManagement.DataAccess
             return DAO.ExecuteSql(sql, parameters);
         }
 
-        /*public static List<Student> SearchStudentByName(string StudentName)
+        public static List<Student> SearchStudentByName(string StudentName)
         {
             string sql = "Select * from Student where StudentName = @studentname";
             DataTable dt = DAO.GetDataBySQL(sql);
@@ -125,6 +125,6 @@ namespace StudentManagement.DataAccess
                 list.Add(s);
             }
             return list;
-        }*/
+        }
     }
 }

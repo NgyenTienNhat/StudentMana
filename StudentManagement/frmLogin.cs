@@ -18,6 +18,7 @@ namespace StudentManagement
         public frmLogin()
         {
             InitializeComponent();
+            textBox_password.PasswordChar = '*';
         }
 
         private void button_exitlogin_Click(object sender, EventArgs e)
@@ -33,8 +34,8 @@ namespace StudentManagement
                 MessageBox.Show("Input Username and Password", "Wrong Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-           
-            if()
+            User_Account user_Account = AccountManager.GetAccount(textBox_username.Text, textBox_password.Text);
+            if (user_Account != null)
             {
                 this.Hide();
                 frmMain main = new frmMain();
@@ -48,7 +49,9 @@ namespace StudentManagement
            
         }
 
-        
-        
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
