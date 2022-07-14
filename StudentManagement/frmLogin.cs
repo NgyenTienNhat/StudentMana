@@ -16,5 +16,10 @@ namespace StudentManagement
         {
             InitializeComponent();
         }
+
+        private void button_exitlogin_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
