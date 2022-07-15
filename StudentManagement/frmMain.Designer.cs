@@ -47,16 +47,16 @@
             this.button_managestd = new System.Windows.Forms.Button();
             this.button_registration = new System.Windows.Forms.Button();
             this.button_std = new System.Windows.Forms.Button();
-            this.panel_main = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_logo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_main = new System.Windows.Forms.Panel();
             this.panel_slide.SuspendLayout();
             this.panel_classsubmenu.SuspendLayout();
             this.panel_scoresubmenu.SuspendLayout();
             this.panel_coursesubmenu.SuspendLayout();
             this.panel_stdsubmenu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_slide
@@ -348,26 +348,6 @@
             this.button_std.UseVisualStyleBackColor = true;
             this.button_std.Click += new System.EventHandler(this.button_std_Click);
             // 
-            // panel_main
-            // 
-            this.panel_main.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel_main.ForeColor = System.Drawing.Color.Black;
-            this.panel_main.Location = new System.Drawing.Point(189, 0);
-            this.panel_main.Name = "panel_main";
-            this.panel_main.Size = new System.Drawing.Size(971, 699);
-            this.panel_main.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 83);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // panel_logo
             // 
             this.panel_logo.BackColor = System.Drawing.Color.White;
@@ -380,6 +360,27 @@
             this.panel_logo.Name = "panel_logo";
             this.panel_logo.Size = new System.Drawing.Size(181, 81);
             this.panel_logo.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(181, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // panel_main
+            // 
+            this.panel_main.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.panel_main.ForeColor = System.Drawing.Color.Black;
+            this.panel_main.Location = new System.Drawing.Point(189, 0);
+            this.panel_main.Name = "panel_main";
+            this.panel_main.Size = new System.Drawing.Size(971, 699);
+            this.panel_main.TabIndex = 1;
             // 
             // frmMain
             // 
@@ -397,8 +398,8 @@
             this.panel_scoresubmenu.ResumeLayout(false);
             this.panel_coursesubmenu.ResumeLayout(false);
             this.panel_stdsubmenu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_logo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
