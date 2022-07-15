@@ -99,28 +99,26 @@ namespace StudentManagement.DataAccess
             return DAO.ExecuteSql(sql, parameters);
         }
 
-        public static List<Student> SearchStudentByName(string StudentName)
+        public static List<Student> SearchStudentByName(string studentName)
         {
             string sql = "Select * from Student where StudentName = @studentname";
-            DataTable dt = DAO.GetDataBySQL(sql);
+            SqlParameter[] param = new SqlParameter[1];
+            param[0] = new SqlParameter("@studentname", SqlDbType.NVarChar);
+            param[0].Value = studentName;
+            DataTable dataTable = DAO.GetDataBySQL(sql, param);
             List<Student> list = new List<Student>();
-            foreach (DataRow dr in dt.Rows)
+            foreach (DataRow dr in dataTable.Rows)
             {
-                int? ClassId = 0;
-                if (dr["ClassId"] != null)
-                {
-                    ClassId = Convert.ToInt32(dr["ClassId"]);
-                }
                 Student s = new Student(
-                    Convert.ToInt32(dr["StudentId"]),
-                    dr["StudentName"].ToString(),
-                    Convert.ToDateTime(dr["Dob"]),
-                    Convert.ToBoolean(dr["Male"]),
-                    dr["Mobile"].ToString(),
-                    dr["RollNo"].ToString(),
-                    dr["Address"].ToString(),
-                    ClassId,
-                    dr["Image"].ToString()
+                    Convert.ToInt32(dr[0]),
+                    dr[1].ToString(),
+                    Convert.ToDateTime(dr[2]),
+                    Convert.ToBoolean(dr[3]),
+                    dr[4].ToString(),
+                    dr[5].ToString(),
+                    dr[6].ToString(),
+                    Convert.ToInt32(dr[7]),
+                    dr[8].ToString()
                     );
                 list.Add(s);
             }

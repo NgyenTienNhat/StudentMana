@@ -30,6 +30,9 @@ namespace StudentManagement.Logics
             return StudentDAO.DeleteStudent(s.StudentId);
         }
 
-       
+        public static List<Student> SearchStudentByName(string studentName)
+        {
+            return StudentDAO.SearchStudentByName(studentName);
+        }
     }
 }
