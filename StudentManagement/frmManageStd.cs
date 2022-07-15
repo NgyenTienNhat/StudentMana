@@ -145,5 +145,6 @@ namespace StudentManagement
             StudentManager.SearchStudentByName(s);
             LoadDataForDGV();*/
         }
+
     }
 }
